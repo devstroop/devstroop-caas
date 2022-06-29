@@ -1,0 +1,217 @@
+#content-wrapper {
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 561px) {
+  #page-wrapper.open {
+    padding-left: 250px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #page-wrapper.open {
+    padding-left: 70px;
+  }
+}
+
+.loading {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
+  }
+  select {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+  }
+}
+/* Base */
+html {
+  overflow-y: scroll;
+}
+body {
+  background: var(--bg-body-color);
+  font-family: 'Inter';
+  color: var(--text-body-color) !important;
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.row > div {
+  margin-bottom: 15px;
+}
+.alerts-container .alert:last-child {
+  margin-bottom: 0;
+}
+#page-wrapper {
+  padding-left: 70px;
+  height: 100%;
+}
+
+#page-wrapper {
+  transition: all 0.4s ease 0s;
+}
+.green {
+  background: #23ae89 !important;
+}
+.blue {
+  background: var(--blue-color) !important;
+}
+.orange {
+  background: #d3a938 !important;
+}
+.red {
+  background: #ae2323 !important;
+}
+.form-group .help-block.form-group-inline-message {
+  padding-top: 5px;
+}
+div.input-mask {
+  padding-top: 7px;
+}
+
+/**
+ * Widgets
+ */
+.widget {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  background: var(--bg-widget-color);
+  border: 1px solid var(--border-widget);
+  border-radius: 8px;
+}
+.widget .widget-header .pagination,
+.widget .widget-footer .pagination {
+  margin: 0;
+}
+.widget .widget-header {
+  color: var(--text-widget-header-color);
+  padding: 10px 15px;
+  line-height: 30px;
+}
+.widget .widget-header i {
+  margin-right: 5px;
+}
+.widget .widget-body {
+  padding: 20px;
+  border-radius: 8px;
+}
+.widget .widget-body table thead {
+  background: var(--bg-widget-table-color);
+}
+.widget .widget-body table thead * {
+  font-size: 14px !important;
+}
+.widget .widget-body table tbody * {
+  font-size: 13px !important;
+}
+.widget .widget-body .error {
+  color: #ff0000;
+}
+.widget .widget-body button {
+  margin-left: 5px;
+}
+.widget .widget-body div.alert {
+  margin-bottom: 10px;
+}
+.widget .widget-body.large {
+  height: 350px;
+  overflow-y: auto;
+}
+.widget .widget-body.medium {
+  height: 250px;
+  overflow-y: auto;
+}
+.widget .widget-body.small {
+  height: 150px;
+  overflow-y: auto;
+}
+.widget .widget-body.no-padding {
+  padding: 0;
+}
+.widget .widget-body.no-padding .error,
+.widget .widget-body.no-padding .message {
+  padding: 20px;
+}
+.widget .widget-footer {
+  border-top: 1px solid #e9e9e9;
+  padding: 10px;
+}
+.widget .widget-icon {
+  background: #30426a;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.widget .widget-icon i {
+  line-height: 66px;
+  color: #ffffff;
+  font-size: 30px;
+}
+.widget .widget-footer {
+  border-top: 1px solid #e9e9e9;
+  padding: 10px;
+}
+.widget .widget-title .pagination,
+.widget .widget-footer .pagination {
+  margin: 0;
+}
+.widget .widget-content .title {
+  font-size: 28px;
+  display: block;
+}
