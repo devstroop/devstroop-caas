@@ -2,8 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+  }
+}
+
 html {
   font-size: 16px;
+  overflow-y: scroll;
+}
+
+body {
+  background: var(--bg-body-color);
+  font-family: 'Inter';
+  color: var(--text-body-color) !important;
 }
 
 html,
@@ -241,9 +260,10 @@ a[ng-click] {
 }
 
 .blocklist-item:hover {
+  @apply border border-blue-7;
+
   background-color: var(--bg-blocklist-hover-color);
   color: var(--text-blocklist-hover-color);
-  border: 1px solid var(--ui-blue-4);
 }
 
 .blocklist-item-box {
